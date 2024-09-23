@@ -1,5 +1,6 @@
 package com.crud.tasks;
 
+import com.crud.tasks.domain.ChangingCharTask;
 import com.crud.tasks.domain.PrimeNumbers;
 import com.crud.tasks.domain.SortingTask;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,10 @@ public class TasksApplication {
 		//SortingTask sortingTask = new SortingTask();
 		//List<Integer> sortedList = sortingTask.sortIntegers(listToSort);
 		//System.out.println(sortedList)x;
-		SpringApplication.run(TasksApplication.class, args);
+		ChangingCharTask changingCharTask = new ChangingCharTask();
+		char test = '&';
+		int result = changingCharTask.changeCharToInteger(test);
+		System.out.println(result);
+		//SpringApplication.run(TasksApplication.class, args);
 	}
 }
