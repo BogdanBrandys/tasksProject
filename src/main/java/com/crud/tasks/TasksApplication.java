@@ -3,12 +3,14 @@ package com.crud.tasks;
 import com.crud.tasks.domain.ChangingCharTask;
 import com.crud.tasks.domain.PrimeNumbers;
 import com.crud.tasks.domain.SortingTask;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@OpenAPIDefinition
 @SpringBootApplication
 public class TasksApplication {
 	public static void main(String[] args) {
@@ -20,10 +22,10 @@ public class TasksApplication {
 		//SortingTask sortingTask = new SortingTask();
 		//List<Integer> sortedList = sortingTask.sortIntegers(listToSort);
 		//System.out.println(sortedList)x;
-		ChangingCharTask changingCharTask = new ChangingCharTask();
-		char test = '&';
-		int result = changingCharTask.changeCharToInteger(test);
-		System.out.println(result);
-		//SpringApplication.run(TasksApplication.class, args);
+		//ChangingCharTask changingCharTask = new ChangingCharTask();
+		//char test = '&';
+		//int result = changingCharTask.changeCharToInteger(test);
+		//System.out.println(result);
+		SpringApplication.run(TasksApplication.class, args);
 	}
 }
