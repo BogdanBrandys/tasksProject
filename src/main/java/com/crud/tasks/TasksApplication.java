@@ -1,15 +1,18 @@
 package com.crud.tasks;
 
 import com.crud.tasks.domain.ChangingCharTask;
+import com.crud.tasks.domain.ChangingCharTaskPro;
 import com.crud.tasks.domain.PrimeNumbers;
 import com.crud.tasks.domain.SortingTask;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@EnableScheduling
 @OpenAPIDefinition
 @SpringBootApplication
 public class TasksApplication {
@@ -26,6 +29,10 @@ public class TasksApplication {
 		//char test = '&';
 		//int result = changingCharTask.changeCharToInteger(test);
 		//System.out.println(result);
-		SpringApplication.run(TasksApplication.class, args);
+		ChangingCharTaskPro taskPro = new ChangingCharTaskPro();
+		String test = "9.31@234";
+		int result = taskPro.changeStringToInteger(test);
+		System.out.println(result);
+		//SpringApplication.run(TasksApplication.class, args);
 	}
 }
