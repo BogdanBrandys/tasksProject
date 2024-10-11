@@ -32,7 +32,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j:9.0.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.google.code.gson:gson'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
 }
 
 tasks.named('test') {
