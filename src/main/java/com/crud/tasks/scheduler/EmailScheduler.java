@@ -31,4 +31,13 @@ public class EmailScheduler {
                         .build()
         );
     }
+    @Scheduled(cron = "0 0 10 * * MON")
+    public void sendNumberOfTasks() {
+        simpleEmailService.send2(Mail.builder()
+                .mailTo(adminConfig.getAdminMail())
+                .subject(SUBJECT)
+                .build()
+        );
+    }
+
 }
